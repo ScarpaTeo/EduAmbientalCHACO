@@ -1,0 +1,12 @@
+1) crear tu rama 
+git checkout -b JuanSaJesi
+
+
+2) antes de subir un cambio fijate que estes en tu rama 
+
+git checkout JuanSaJesi
+
+3) metele si:
+a) git status 
+b) git add . 
+c) git push origin JuanSaJesi
