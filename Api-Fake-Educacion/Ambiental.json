@@ -1,0 +1,86 @@
+{
+  "Multimedia": [
+    {
+      "Id": 1,
+      "Title": "Proyecto Ambiental",
+      "Descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Imagen": "https://images.pexels.com/photos/2014693/pexels-photo-2014693.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["noticias","campañas"]
+    },
+    {
+      "Id": 2,
+      "Title": "Noticia Ambiental",
+      "Descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Imagen": "https://images.pexels.com/photos/1534516/pexels-photo-1534516.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["noticias"]
+    },
+    {
+      "Id": 3,
+      "Title": "Proyecto Arboles Urbanos",
+      "Descripcion": "DLorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Imagen": "https://images.pexels.com/photos/439862/pexels-photo-439862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["proyectos","noticias","campañas"]
+    },
+    {
+      "Id": 4,
+      "Title": "Proyecto Ambiental 2019",
+      "Descripcion": "DLorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Imagen": "https://images.pexels.com/photos/2093323/pexels-photo-2093323.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["proyectos"]
+    },
+    {
+      "Id": 5,
+      "Title": "Campaña de Concientizacion Ambiental",
+      "Descripcion": "Introduccion a la programacion con C# ",
+      "Imagen": "https://images.pexels.com/photos/1749057/pexels-photo-1749057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["campañas","proyectos"]
+    },
+    {
+      "Id": 6,
+      "Title": "Noticial Ambiental Chaco",
+      "Descripcion": "introducción al diseño web ",
+      "Imagen": "https://images.pexels.com/photos/2131841/pexels-photo-2131841.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["proyectos","noticias"]
+    },
+    {
+      "Id": 7,
+      "Title": "Campaña una Milla Verde",
+      "Descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Imagen": "https://images.pexels.com/photos/2127969/pexels-photo-2127969.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["campañas"]
+    },
+    {
+      "Id": 8,
+      "Title": "Ministerio de Ambiente",
+      "Descripcion": "lorem",
+      "Imagen": "https://images.pexels.com/photos/1484213/pexels-photo-1484213.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "Categoria":["noticias"]
+    }
+  ],
+  "Administrador" : [
+    {
+      "Id": 1,
+      "Name": "Juansa Persoglia",
+      "UserName": "Admin1",
+      "Password": "informatorio19"
+    },
+    {
+      "Id": 2,
+      "Name": "Jesica Dominguez",
+      "UserName": "Admin2",
+      "Password": "informatorio19"
+    },
+    {
+      "Id": 3,
+      "Name": "Gonza Martinez",
+      "UserName": "Admin3",
+      "Password": "informatorio19"
+    },
+    {
+      "Id": 4,
+      "Name": "Teo Scarpa",
+      "UserName": "Admin4",
+      "Password": "informatorio19"
+    }
+  ]
+}

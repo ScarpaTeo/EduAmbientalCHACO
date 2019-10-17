@@ -1,0 +1,15 @@
+1) instalat jason server 
+
+npm install -g json-server
+-----------------------------------
+
+2) ejecutar el comando 
+
+json-server --watch Ambiental.json --port 4000
+------------------------------------
+
+3) ahora ya pueden consumir la api desde la URL
+los recursos
+  
+http://localhost:4000/Multimedia
+http://localhost:4000/Administrador
