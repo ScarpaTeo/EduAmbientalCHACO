@@ -10,3 +10,11 @@ git checkout JuanSaJesi
 a) git status 
 b) git add . 
 c) git push origin JuanSaJesi
+
+
+$) cada tanto 
+
+git pull origin NombreDeBranch
+
+Hace una actualización
+ en nuestro branch local, desde un branch remoto que indicamos en el comando.
