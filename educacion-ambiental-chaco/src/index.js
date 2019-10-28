@@ -5,11 +5,13 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import Footer from './Componentes/Footer';
 import Plans from './Componentes/Plans'
-import GetGaleria from './Componentes/getGaleria'
 import * as serviceWorker from './serviceWorker';
+import Interactivo from './Componentes/mapa'
+import App from './App'
 
 
-ReactDOM.render(<GetGaleria/>, document.getElementById('root'));
+
+ReactDOM.render(<Interactivo/>, document.getElementById('root'));
 
 
 serviceWorker.unregister();

@@ -2,24 +2,41 @@ import React from 'react'
 import {MDBRow, MDBCol, MDBContainer } from 'mdbreact';
 import Tarjeta from './Tarjeta'
 
-function Galeria({imagenes}){
+function Galeria({imagenes,titulo}){
+  const mensaje = titulo;
+  
+  let men;
 
+  switch (mensaje) {
+      case '1':
+        men="Zona Ramsar"
+        break;
+      case '2':
+          men="Zona Agropecuaria Centro/Sur"
+          break;
+      case '3':
+          men="Zona Agropecuaria Centro/Norte"
+          break;
+      case '4':
+          men="Zona Impenetrable"
+          break;
+      case '5':
+          men="Zona Ramsar"
+          break;
+    
+      default:
+        men="sin clasificar"
+        break;
+    }
+    
     return(
-        <MDBContainer className="primary-color
-        #4285F4">
+        <MDBContainer fluid className="primary-color #4285F4">
         <section className="text-center my-5">
-      <h2 className="h1-responsive font-weight-bold text-center white-text my-5 ">
-        Educacion Ambiental Chaco 
-      </h2>
-      <p className="white-text text-center w-responsive mx-auto mb-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-        error amet numquam iure provident voluptate esse quasi, veritatis
-        totam voluptas nostrum quisquam eum porro a pariatur veniam.
-      </p>
+        <h3 className="text-white pb-2">{men}</h3>
         <MDBRow>
-            {imagenes.map(imagen=>(
+        {imagenes.map(imagen=>(
                 <Tarjeta
-                key={imagen.Id}
+                key={imagen.id}
                 imagen={imagen}/>                
             ))}
         </MDBRow>
