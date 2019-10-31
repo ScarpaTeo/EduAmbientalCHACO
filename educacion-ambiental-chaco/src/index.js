@@ -7,11 +7,13 @@ import Footer from './Componentes/Footer';
 import Plans from './Componentes/Plans'
 import * as serviceWorker from './serviceWorker';
 import Interactivo from './Componentes/mapa'
-import App from './App'
+import App from './Componentes/CargarContenido'
+import CargarContenido from './Componentes/CargarContenido'
+import CargarImg from './Componentes/CargarImagenes'
 
 
 
-ReactDOM.render(<Interactivo/>, document.getElementById('root'));
+ReactDOM.render(<CargarContenido/>, document.getElementById('root'));
 
 
 serviceWorker.unregister();

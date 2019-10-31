@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class App extends Component {
+class CargarImagenes extends Component {
 
   state = {
-    title: '',
-    content: '',
     image: null
   };
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
-  };
 
   handleImageChange = (e) => {
     this.setState({
@@ -25,10 +18,8 @@ class App extends Component {
     e.preventDefault();
     console.log(this.state);
     let form_data = new FormData();
-    form_data.append('image', this.state.image, this.state.image.name);
-    form_data.append('title', this.state.title);
-    form_data.append('content', this.state.content);
-    let url = 'http://localhost:8000/api/posts/';
+    form_data.append('picture', this.state.image, this.state.image.name);
+    let url = 'https://localhost:44398/api/Animal/Photos?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=2';
     axios.post(url, form_data, {
       headers: {
         'content-type': 'multipart/form-data'
@@ -42,15 +33,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
+        <h3>Cargar fotos en la galeria</h3>
         <form onSubmit={this.handleSubmit}>
-          <p>
-            <input type="text" placeholder='Title' id='title' value={this.state.title} onChange={this.handleChange} required/>
-          </p>
-          <p>
-            <input type="text" placeholder='Content' id='content' value={this.state.content} onChange={this.handleChange} required/>
-
-          </p>
           <p>
             <input type="file"
                    id="image"
@@ -63,4 +48,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default CargarImagenes;
