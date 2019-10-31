@@ -26,78 +26,7 @@ class App extends Component {
                 <Route exact path="/Sumate" component={Sumate}/> 
             </Switch>
         </BrowserRouter>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/> 
+      
       </div>
       
       
