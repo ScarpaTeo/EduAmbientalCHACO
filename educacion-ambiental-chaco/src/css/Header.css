@@ -1,0 +1,26 @@
+.bg{
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-image: url("../img/pajarito.jpg");
+    height: 99vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+        
+}
+
+@media only screen and (min-width: 720px){
+    .bg{ 
+        background-image: url("../img/hh.jpg");
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        height: 100vh;
+        
+    }
+
+}
