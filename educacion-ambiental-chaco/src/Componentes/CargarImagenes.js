@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import FormImg from './FormularioImagen'
 
 class CargarImagenes extends Component {
-
+/*
   state = {
-    image: null
+    image: null,
+    file:'https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   };
 
 
   handleImageChange = (e) => {
     this.setState({
-      image: e.target.files[0]
+      image: e.target.files[0],
+      file: URL.createObjectURL(e.target.files[0])
     })
   };
 
-  handleSubmit = (e) => {
+  handleSubmitImg = (e) => {
     e.preventDefault();
     console.log(this.state);
     let form_data = new FormData();
-    form_data.append('picture', this.state.image, this.state.image.name);
-    let url = 'https://localhost:44398/api/Animal/Photos?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=2';
+    form_data.append('Imgpathsave', this.state.image, this.state.image.name);
+    let url = 'https://localhost:44398/api/Contenido/AddImg?id=7';
     axios.post(url, form_data, {
       headers: {
         'content-type': 'multipart/form-data'
@@ -30,20 +33,22 @@ class CargarImagenes extends Component {
         })
         .catch(err => console.log(err))
   };
-
+*/
   render() {
     return (
-      <div className="container">
-        <h3>Cargar fotos en la galeria</h3>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <input type="file"
-                   id="image"
-                   accept="image/png, image/jpeg"  onChange={this.handleImageChange} required/>
-          </p>
-          <input type="submit"/>
-        </form>
-      </div>
+      <React.Fragment>
+        <div className="row">
+          <div className="col-d-6">
+            <FormImg
+            onChange={this.handleImageChange}
+            onSubmit={this.handleSubmitImg}
+            titulo="Portada"
+            file={this.state.file}
+            />
+          </div>
+        </div>
+      </React.Fragment>
+
     );
   }
 }

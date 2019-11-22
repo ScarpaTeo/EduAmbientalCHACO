@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { MDBContainer} from "mdbreact";
 import Galeria from './Galeria'
+import './css/getGaleria.css'
 
 
 
@@ -13,7 +14,7 @@ function GetGaleria({filtro}){
 
     useEffect(() => {
       const consultarApi = async () =>{
-          const url= `https://localhost:44398/api/Animal/Get1`;
+          const url= `https://localhost:44398/api/Contenido/GetAll`;
          
           const respuesta = await fetch(url
           );
@@ -38,7 +39,7 @@ function GetGaleria({filtro}){
     const result = filtro;
     let mostrar;
     if(result!==''){
-        mostrar=imagenes.filter(user => user.Categoria==result)
+        mostrar=imagenes.filter(user => user.categoria==result)
     } else{
         mostrar=imagenes
         console.log(imagenes)
@@ -46,12 +47,12 @@ function GetGaleria({filtro}){
 
     return(
 
-        <MDBContainer fluid className="primary-color #4285F4">
-            <div className="row justify-content-center">
+        <div fluid className="container-fluid">
+            <div className="text-center">
 
                 <Galeria
                     imagenes={mostrar}
-                    titulo={filtro}
+                    categoria={filtro}
                 />
                 {(paginaActual===1) ? null :(
                     <button onClick={paginaAnterior} type="button" className="btn btn-info mr-1">Anterior &laquo;</button>
@@ -61,7 +62,7 @@ function GetGaleria({filtro}){
                     <button onClick={paginaSiguiente} type="button" className="btn btn-info mr-1">Siguiente &raquo;</button>                    
                 )}
             </div>
-        </MDBContainer> 
+        </div> 
 
     )
 }

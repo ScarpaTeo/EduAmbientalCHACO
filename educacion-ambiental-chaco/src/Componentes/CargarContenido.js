@@ -7,8 +7,8 @@ class CargarContenido extends Component {
     titulo: '',
     subtitulo: '',
     detalle: '',
-    sector: '',
     categoria: '',
+    tags: '',
     image: null
   };
 
@@ -34,10 +34,11 @@ class CargarContenido extends Component {
     form_data.append('categoria',this.state.sector);
     form_data.append('tags',this.state.categoria);
     form_data.append('picture', this.state.image, this.state.image.name);
-    let url = 'https://localhost:44398/api/Animal/CargarContenido?token=219369dc-66cb-4a1f-ac41-53839f5e92fa';
+    let url = `https://localhost:44398/api/Animal/CargarContenido?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&titulo="hola mundo"&subtitulo="Lorem ipsum"&detalle="jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjeeeeeeeeeeeeeeeeeeeeeweewewe"`;
     axios.post(url, form_data, {
       headers: {
         'content-type': 'multipart/form-data'
+        
       }
     })
         .then(res => {
@@ -62,7 +63,7 @@ class CargarContenido extends Component {
           </div>
           <p>
             <label for="sel1">Sector</label>
-            <select className="form-control z-depth-1" id="Sector" value={this.state.sector} onChange={this.handleChange} >
+            <select className="form-control z-depth-1" id="categoria" value={this.state.sector} onChange={this.handleChange} >
               <option value="" >Todos</option>
               <option value="1">Zona Ramsar</option>
               <option value="2">Zona Agropecuaria Centro/Sur</option>
@@ -72,7 +73,7 @@ class CargarContenido extends Component {
           </p>
           <p>
             <label for="sel1">Categoria</label>
-            <select className="form-control z-depth-1" id="Categoria" value={this.state.categoria} onChange={this.handleChange} >
+            <select className="form-control z-depth-1" id="tags" value={this.state.categoria} onChange={this.handleChange} >
               <option value="">Todos</option>
               <option value="noticia">Noticias</option>
               <option value="campaña">Campañas</option>
@@ -89,7 +90,7 @@ class CargarContenido extends Component {
                    id="image"
                    accept="image/png, image/jpeg"  onChange={this.handleImageChange} required/>
           </p>
-          <input className="btn btn-info" type="submit" value="Cargar"/>
+          <input className="btn btn-info" type="submit"/>
         </form>
       </div>
     );

@@ -1,25 +1,28 @@
 import React, { useState,useEffect } from 'react'
 import {MDBRow, MDBCol, MDBContainer } from 'mdbreact';
-import '../Componentes/css/style.css'
+import './css/style.css'
 import GetGaleria from '../Componentes/getGaleria'
+import NavBarPage from './NavbarPage'
+import Footer from './Footer'
 
 const Interactivo = () =>{
     const [Categoria,guardarCategoria]=useState("");
 
     return(
-        <MDBContainer fluid className="primary-color #4285F4">
-            <div className="info-color #33b5e5 p-1 mb-3">
-                <h2 className="h1-responsive white-text font-weight-bold text-center my-5 ">
+        <div className="row pt-5 m-auto">
+            <NavBarPage/>
+            <div className="col-md-6 py-3 py-md-5">
+                <h2 className="h1-responsive white-text font-weight-bold text-center mt-1">
                 Educacion Ambiental Chaco 
                 </h2>
-                <p className="white-text text-center w-responsive mx-auto mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-                error amet numquam iure provident voluptate esse quasi, veritatis
-                totam voluptas nostrum quisquam eum porro a pariatur veniam.
+                <p className="white-text text-center mt-4">
+                DESDE EL AÑO 2017 EL MINISTERIO DE PLANIFICACIÓN AMBIENTE E INNOVACIÓN 
+TECNOLÓGICA LIDERA EL DISEÑO DEL NUEVO PROGRAMA DE EDUCACION AMBIENTAL
+DE LA PROVINCIA DEL CHACO.
                 </p>
             </div>
-           <div className="mapdiv">
-                <svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 337.792 288.902">
+           <div className="col-md-6  text-center my-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.792 288.902">
                     <g id="Grupo_5" data-name="Grupo 5" transform="translate(-755 15337.821)">
                         <a href="#1">
                             <path id="Trazado_14" onClick={event => guardarCategoria(event="3")} data-name="Trazado 14" class="cls-1" d="M20.165-37.559l8.1-.623-1-48.2,15.176,9.413,1.031,1.958.638,2.2,5.341,4.277,2.812,3.035L53.6-61.607l4.189,2.73L58-53.358l.819,1.374,3.665.24,1.751.893,1.578,1.22,6.694.549,1.922.858L75.768-46.3l.769,3.453.58,5.116,1.164.654,5,.62h4.663l1.476-.839,3.522-.436,2.918,2.146,6.269,3.243,2.747,1.09,4.84,4.055,2.093,4.187,5.145,3.444L122.17-15.2,112.016-4.274l-.439,2.332h-5.729v4.11H91.9l-9.091,9.34H78.2v2.117l-2.117.623L64.121,12.8l-.958,22.034H20.245L20.724,43H0V14.889l6.422,1.9L18.909-13.676Z" transform="translate(948 -15138)"/>
@@ -42,7 +45,8 @@ const Interactivo = () =>{
            <GetGaleria 
            filtro={Categoria}
            />
-        </MDBContainer>
+           <Footer/>
+        </div>
     )
 }
-export default Interactivo
+export default Interactivo;

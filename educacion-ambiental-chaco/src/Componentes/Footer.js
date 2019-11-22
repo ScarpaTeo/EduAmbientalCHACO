@@ -1,13 +1,13 @@
 import React from "react";
-import { MDBIcon,MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import logo1 from '../Componentes/Img/Logo1.png'
-import logo2 from '../Componentes/Img/Logo2.png'
-import logo3 from '../Componentes/Img/Logo3.png'
-import logo4 from '../Componentes/Img/Logo4.png'
+import logo1 from '../Componentes/Img/Logo1.png';
+import logo2 from '../Componentes/Img/Logo2.png';
+import logo3 from '../Componentes/Img/Logo3.png';
+import logo4 from '../Componentes/Img/Logo4.png';
+import './css/Footer.css';
 
 const FooterPage = () => {
-  return (
-    <MDBFooter color="orange" className="font-small pt-4 mt-4">
+/*
+  <MDBFooter color="orange" className="font-small pt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="4">
@@ -44,16 +44,26 @@ const FooterPage = () => {
             </ul>
           </MDBCol>
         </MDBRow>
-      </MDBContainer>
-      <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid style={{textAlign:"center"}}>
-          <img src={logo4} className="ml-0" style={{width:'120px'}} alt="logoChaco"/>
-          <img src={logo3} className="ml-5"style={{width:'150px'}} alt="logoChaco"/>
-          <img src={logo2} className="ml-5"style={{width:'150px'}} alt="logoChaco"/>
-          <img src={logo1} className="ml-5"style={{width:'100px'}} alt="logoChaco"/>
-        </MDBContainer>
-      </div>
-    </MDBFooter>
+      </MDBContainer>*/
+  return (
+    <div className="row justify-content-center align-items-center foo fixed-bottom py-2 m-auto">
+      <div className="col-3">
+          <img src={logo4} className="loguitos img-fluid"  alt="logoChaco"/>
+          </div>
+        <div className="col-3">
+          <img src={logo3} className="loguitos img-fluid" alt="logoChaco"/>
+          </div>
+        <div className="col-3">
+          <img src={logo2} className="loguitos img-fluid" alt="logoChaco"/>
+          </div>
+        <div className="col-3">
+          <img src={logo1} className="loguitos img-fluid" alt="logoChaco"/>
+          </div>
+    </div>
+    
+       
+      
+   
   );
 }
 
