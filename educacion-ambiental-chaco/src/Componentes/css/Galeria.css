@@ -1,0 +1,14 @@
+/*
+body{
+	font-family: 'Roboto', sans-serif;
+	background: #45B39D url('img/fondo.jpg');
+	background-size:cover;
+	background-attachment:fixed;
+}*/
+
+@media (min-width: 720px){
+    .fondito{
+		 background-color: white;
+	}
+    
+}

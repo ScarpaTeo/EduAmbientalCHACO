@@ -1,0 +1,50 @@
+
+
+.mapdiv{
+    margin: auto;
+}
+
+.cls-1 {
+    fill: #41e8ee;
+}
+.cls-1:hover{
+    fill: #192abd;
+}
+
+.cls-2 {
+    fill: #52ff34;
+}
+.cls-2:hover {
+    fill: #05a139;
+    
+}
+
+.cls-3 {
+    fill: #74860f;
+    
+}
+.cls-3:hover {
+    fill: #e7ff5f;
+}
+
+.cls-4 {
+    fill: #92180b;
+}
+.cls-4:hover {
+    fill: #f8341f;
+}
+
+.cls-5 {
+    fill: #628b02;
+
+}
+.cls-5:hover {
+    fill: #bffb33;
+
+}
+
+svg{
+    max-width: 320px;
+}
+
+

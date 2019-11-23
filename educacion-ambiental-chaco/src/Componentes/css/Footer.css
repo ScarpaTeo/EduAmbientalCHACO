@@ -1,0 +1,25 @@
+.foo{
+    width: 90vw;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: orange;
+    
+}   
+
+.loguitos{
+    width: 100%;
+}
+
+@media (min-width: 720px){
+    .foo{
+        height: 70px;
+        width: 70vw;
+    } 
+    
+    .loguitos{
+        width: 70%;
+    }
+
+    
+
+}
