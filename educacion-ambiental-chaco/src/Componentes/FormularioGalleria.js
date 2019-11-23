@@ -1,12 +1,28 @@
 import React from 'react'
 import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
+import imgpdf from '../Componentes/Img/pdf.png'
+import {Redirect,BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 class FormularioImgGallery extends React.Component{
-    
+    state={
+        boton:false
+    }
+
+
+    cambiarEstado =()=>{
+
+        setTimeout(() => {
+            this.setState({
+                boton:true
+            })
+          }, 3000);
+
+    }
     
     render(){
         const {onChange,onSubmit,file,titulo}=this.props;
+
     
         return(
             <React.Fragment>
@@ -23,17 +39,23 @@ class FormularioImgGallery extends React.Component{
                     
                           
                 <div className="row">
-                    {file.map(foto=>(
-                        <div class="col-sm-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                            <img src={foto} style={{width:"200px"}} className="img-responsive p-1 img-fluid" alt=""/>
-                            </a>
+                 {file.map(foto=>(
+                        <div class="col-sm-6 col-md-4">
+                            <div className="card" style={{minWidth:"200px"}}>
+                                <div className="card-body">
+                                    
+                                    <img src={foto} width="100%" className=" thumbnail img-responsive p-1 img-fluid" alt=""/>
+                                    
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
-                <button className="btn btn-outline-primary btn-rounded waves-effect btn-lg btn-block" type="submit">Cargar</button>
+
+                <button onClick={this.cambiarEstado} className="btn btn-outline-primary btn-rounded waves-effect btn-lg btn-block" type="submit">Cargar</button>
                 </form>
-                
+                {this.state.boton ? <Redirect to="/Provincias" /> : null}
+
             </div>
         </div>
         
@@ -42,3 +64,4 @@ class FormularioImgGallery extends React.Component{
     }
 }
 export default FormularioImgGallery
+
