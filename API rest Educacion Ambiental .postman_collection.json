@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "cdccce56-e628-43d9-aaac-52e53640989c",
+		"name": "API rest Educacion Ambiental ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44398/api/Access/Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"teoscarpa@gmail.com\",\n\t\"password\":\"info\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Animal/Photo2?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&name=\"canguro\"&patas=4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Downloads/65786651_674644779628352_242171597840973824_n.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Animal/Photo2?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&name=\"canguro\"&patas=4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Animal",
+						"Photo2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "219369dc-66cb-4a1f-ac41-53839f5e92fa"
+						},
+						{
+							"key": "name",
+							"value": "\"canguro\""
+						},
+						{
+							"key": "patas",
+							"value": "4"
+						}
+					]
+				},
+				"description": "con este se carga contenido en la api :D"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Access/Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\",\n\t\"nombre\":\"juan salvador\",\n\t\"email\":\"juansa@gmail.com\",\n\t\"password\":\"info\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"Register"
+					]
+				},
+				"description": "Registrar Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Animal/Delete?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Animal/Delete?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Animal",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "219369dc-66cb-4a1f-ac41-53839f5e92fa"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Eliminar contenido"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Animal/Edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "219369dc-66cb-4a1f-ac41-53839f5e92fa",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"d5b62b5b-9c0b-45d4-a0bd-f5e514dd7738\",\n\t\"id\":2,\n\t\"titulo\":\"\",\n\t\"subtitulo\":\"B\",\n\t\"detalle\":\"B\",\n\t\"categoria\":2,\n\t\"tags\":\"B\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Animal/Edit?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Animal",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "219369dc-66cb-4a1f-ac41-53839f5e92fa",
+							"disabled": true
+						},
+						{
+							"key": "Id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "titulo",
+							"value": "B",
+							"disabled": true
+						},
+						{
+							"key": "subtitulo",
+							"value": "B",
+							"disabled": true
+						},
+						{
+							"key": "detalle",
+							"value": "B",
+							"disabled": true
+						},
+						{
+							"key": "categoria",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "tags",
+							"value": "politica",
+							"disabled": true
+						}
+					]
+				},
+				"description": "editar contenido"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Animal/Photos?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/1.jpeg",
+							"disabled": true
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/2.jpeg",
+							"disabled": true
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/3.jpeg",
+							"disabled": true
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/4.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Animal/Photos?token=219369dc-66cb-4a1f-ac41-53839f5e92fa&id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Animal",
+						"Photos"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "219369dc-66cb-4a1f-ac41-53839f5e92fa"
+						},
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "patas",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				},
+				"description": "añadir galeria de fotos"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

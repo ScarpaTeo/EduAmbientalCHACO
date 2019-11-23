@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import './css/referente.css'
+
 
 const Referentes = ({information}) => {
     
@@ -9,14 +11,17 @@ const Referentes = ({information}) => {
 
 
   return (
-    <div className="row ">
+    <div className="row tarjeta">
             <div className="col-10 card " style={{width:'20rem', margin:'30px', borderRadius: "25px"}}>
-              <img className="mx-auto mt-2" src={newImg2} style={{borderRadius:"100px"}} width="100px" alt="Card image cap"/>
-              <div className="card-body">
+              <img className="img mx-auto mt-5" src={newImg2} style={{borderRadius:"100px"}} width="200px" alt="Card image cap"/>
+              <div className="card-body text-center">
                     
-                    <h5 className="card-title">{nombre} {apellido}</h5>
-                    <p className="card-text">{ubicacion}</p>
-                    <p className="card-text"><small>{email}</small></p>
+                    <p>Referente:</p>
+                    <h4 className="card-title mb-5">{nombre} {apellido}</h4>
+                    <p>Ubicacion:</p>
+                    <p className="card-text mb-5">{ubicacion}</p>
+                    <p>Contacto: </p>
+                    <p className="card-text mb-5"><small>{email}</small></p>
                 
                </div>
             </div>

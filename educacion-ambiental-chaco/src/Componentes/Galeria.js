@@ -1,6 +1,7 @@
-import React from 'react'
-import {MDBRow, MDBCol, MDBContainer } from 'mdbreact';
-import Tarjeta from './Tarjeta'
+import React from 'react';
+import Tarjeta from './Tarjeta';
+import './css/Galeria.css';
+
 
 function Galeria({imagenes,categoria}){
   const mensaje = categoria;
@@ -30,18 +31,18 @@ function Galeria({imagenes,categoria}){
     }
     
     return(
-        <MDBContainer fluid className="">
-        <section className="text-center my-5">
-        <h3 className="text-white pb-2">{men}</h3>
-        <div className="row">
-        {imagenes.map(imagen=>(
-                <Tarjeta
-                imagen={imagen}/>                
-            ))}
-        </div>
-        </section>
+        <div fluid className="fondito px-3 pt-5 mt-5" style={{borderRadius: "25px"}}>
+            <section className="text-center mb-5">
+                <h3 className="text-white pb-2">{men}</h3>
+                <div className="row">
+                {imagenes.map(imagen=>(
+                        <Tarjeta
+                        imagen={imagen}/>                
+                    ))}
+                </div>
+            </section>
 
-      </MDBContainer>
+      </div>
 
     )
 }

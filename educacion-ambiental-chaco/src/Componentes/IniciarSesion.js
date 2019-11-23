@@ -38,8 +38,7 @@ handleSubmit = async e =>{
           form:{
             email:'',
             password:''
-          },
-          redirect:true
+          }
         })
       //console.log(this.state.token.data)
         
@@ -47,6 +46,9 @@ handleSubmit = async e =>{
       localStorage.setItem('token',this.state.token.data);
       let content=localStorage.getItem('token');
       console.log(content)
+      this.setState({
+          redirect:true
+      })
 
             // setter
             //localStorage.setItem('myData', data);

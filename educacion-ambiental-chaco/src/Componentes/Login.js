@@ -14,6 +14,7 @@ class Login extends React.Component {
   render(){
 
     const {redi,onChange, onSubmit, form} = this.props
+    
 
     return (
       <MDBContainer>
@@ -47,7 +48,7 @@ class Login extends React.Component {
                   </div>
               </div>
 
-              <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" onClick={this.enviar} type="submit">Entrar</button>
+              <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Entrar</button>
 
             </form>
 

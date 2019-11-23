@@ -30,17 +30,18 @@ class CargarGalleria extends Component {
 
     const { handle } = this.props.match.params
 
-    for (var i = 0; i < this.state.image.length ; i++) {
+    //for (var i = 0; i < this.state.image.length ; i++) {
       console.log(this.state);
       let form_data = new FormData();
-      form_data.append('Imgpathsave', this.state.image[i]);
+      for (const file of this.state.image){
+      form_data.append('Imgpathsave',file,file.name);
       let url = `https://localhost:44398/api/Contenido/AddGallery?id=${handle}`;
       axios.post(url, form_data, {
         headers: {
           'content-type': 'multipart/form-data'
         }
       })
-  }
+    }
   };
 
   render() {

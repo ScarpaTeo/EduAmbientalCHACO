@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom';
 import { MDBIcon, MDBCard, MDBCol } from 'mdbreact';
-
+import './css/tarjeta.css'
 const Tarjeta =({imagen}) =>{
 
   
@@ -33,22 +33,27 @@ const Tarjeta =({imagen}) =>{
         men="morpheus-den-gradient ml-4 mr-4 rounded"
         break;
     }
+
+    var tipo = "tipo";
+
+
     
     //aca tranformo la imagen de la base a un formato para mostrar
     return (
-        <div className="col-12 col-sm-6 col-md-4 col-lg-3 px-1" >
-          <MDBCard collection className="z-depth-1-half mb-4 #0091ea accent-4" style={{borderRadius: "25px", boxShadow: "0px 10px 10px #000000"}}>
-            <div className="view zoom rounded mb-1">
-              <img src={newImg} className="card-img-top pb-2"width="200" alt=""/>
-              <div className={men} style={{height:"30px",textAlign:"center"}}>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3" >
+          <div collection className="card z-depth-1-half mb-4" style={{borderRadius: "25px", boxShadow: "0px 10px 10px #000000"}}>
+            
+            <div className="m-3">
+              <img src={newImg} className="imagen img-fluid card-img-top mb-4 mx-auto" alt=""/>
+              <div className={men} style={{textAlign:"center"}}>
 
-              <h6 className="pt-1 white-text card-text"><small>{tags}</small></h6>
+                <h6 className="pt-1 white-text card-text"><small>{tags}</small></h6>
               </div>
               
-              <h5 className="pt-3 blue-text card-title"><strong>{titulo}</strong></h5>
-              <p className="pt-3 blue-text card-text"><small>{subtitulo}</small></p>
+              <h6 className="pt-3 blue-text mx-4 card-title"><strong>{titulo}</strong></h6>
+              <p className="pt-3 mx-2 card-text"><small>{subtitulo}</small></p>
 
-              <Link className="btn #00b0ff light-blue accent-3 rounded white-text" to={{
+              <Link className="btn light-blue white-text mb-3" to={{
                             pathname: `/Contenido/${imagen.id}`,
                             state: {
                             fromNotifications: true
@@ -57,7 +62,7 @@ const Tarjeta =({imagen}) =>{
 
               
             </div>
-          </MDBCard>
+          </div>
         </div>
 
     )

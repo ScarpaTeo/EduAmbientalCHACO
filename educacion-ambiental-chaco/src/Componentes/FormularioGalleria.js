@@ -18,7 +18,7 @@ class FormularioImgGallery extends React.Component{
                 <form onSubmit={onSubmit}>
                     
                     <label class="btn btn-primary btn-lg" style={{fontSize:"40px",borderRadius:"10px"}}>
-                        +<input type="file" accept="image/png, image/jpeg"  onChange={onChange} className="uploadFile img" id="image" style={{width:"0px" ,height:"0px",overflow:"hidden"}} required/>
+                        +<input type="file" accept="image/png, image/jpeg" onChange={onChange} className="uploadFile img" id="image" style={{width:"0px" ,height:"0px",overflow:"hidden"}} required/>
                     </label>
                     
                           
