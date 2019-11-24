@@ -43,7 +43,34 @@ const TablaContenido = ({information}) => {
         </span>
         <span class="table-remove">
           <button type="button"
-            class="btn btn-outline-danger btn-rounded btn-sm my-0" value={id} onClick={handleDelete} >Eliminar</button>
+            class="btn btn-outline-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target={'#'+id} >Eliminar</button>
+
+<div class="modal fade" id={id} tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="heading lead">Eliminar Contenido</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="text-center">
+          <p>¿Estas seguro?</p>
+          <img src={newImg} width="200px" alt="#"/>
+        </div>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <button type="button" className="btn btn-danger btn-rounded btn-sm my-0" value={id} onClick={handleDelete}>Eliminar</button>
+        <button type="button" className="btn btn-outline-danger btn-rounded btn-sm my-0" data-dismiss="modal">No, Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
         </span>
       </td>
     </tr>
