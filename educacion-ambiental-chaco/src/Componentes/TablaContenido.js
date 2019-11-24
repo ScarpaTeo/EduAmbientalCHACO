@@ -38,39 +38,97 @@ const TablaContenido = ({information}) => {
       <td className="mx-auto">
     
         <span class="table-remove">
-          <button type="button"
-            class="btn btn-outline-success btn-rounded btn-sm my-0" value={id} >Editar</button>
+      
+            <button type="button"
+            class="btn btn-outline-success btn-rounded btn-sm my-0" data-toggle="modal" data-target={'#'+id+'E'}>Editar</button>
+            <div class="modal fade" id={id+'E'} tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-notify modal-success" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <p class="heading lead ">Editar Contenido</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="text-center">
+                      
+                      <form >
+                          <p>
+                              <input className="form-control z-depth-1" type="text" placeholder='Titulo' maxlength="30" name='titulo' id='Titulo' value={titulo} />
+                          </p>
+                          <p>
+                              <input  className="form-control z-depth-1" type="text" placeholder='Subtitulo' maxlength="120" name='subtitulo' id='Subtitulo' value={subtitulo}  />
+                          </p>
+                          <div class="form-group shadow-textarea">
+                              <textarea className="form-control z-depth-1" name="detalle" id="Detalle" rows="3" placeholder="Escribe una Descripcion..." value={detalle}  />
+                          </div>
+                          <p>
+                              <label for="categoria" className="grey-text">Sector</label>
+                              <select className="form-control z-depth-1" name="categoria" id="Categoria" value={categoria} >
+                              <option value="">Todos</option>
+                              <option value="1">Zona Ramsar</option>
+                              <option value="2">Zona Agropecuaria Centro/Sur</option>
+                              <option value="3">Zona Agropecuaria Centro/Norte</option>
+                              <option value="4">Zona Impenetrable</option>
+                              </select>
+                          </p>
+                          <p>
+                              <label for="Tags" className="grey-text">Categoria</label>
+                              <select className="form-control z-depth-1" name="tags" id="Tags" value={tags} >
+                              <option value="">Todos</option>
+                              <option value="noticia">Noticias</option>
+                              <option value="campaña">Campañas</option>
+                              <option value="proyecto">Proyectos</option>
+                              <option value="efemeride">Efemerides</option>
+                              <option value="evento">eventos</option>
+                              </select>
+                          </p>
+                          <button className="btn btn-success btn-rounded waves-effect btn-lg btn-block white-text" type="submit">Guardar</button>
+                          <button type="button" className="btn btn-outline-success btn-rounded waves-effect btn-lg btn-block " data-dismiss="modal">No, Cancelar</button>
+
+                        </form>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
         </span>
         <span class="table-remove">
+
           <button type="button"
-            class="btn btn-outline-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target={'#'+id} >Eliminar</button>
+            class="btn btn-outline-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target={'#'+id}>Eliminar</button>
+            <div class="modal fade" id={id} tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-notify modal-danger" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <p class="heading lead ">Eliminar Contenido</p>
 
-<div class="modal fade" id={id} tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p class="heading lead">Eliminar Contenido</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                  </div>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <div class="text-center">
-          <p>¿Estas seguro?</p>
-          <img src={newImg} width="200px" alt="#"/>
-        </div>
-      </div>
-
-      <div class="modal-footer justify-content-center">
-        <button type="button" className="btn btn-danger btn-rounded btn-sm my-0" value={id} onClick={handleDelete}>Eliminar</button>
-        <button type="button" className="btn btn-outline-danger btn-rounded btn-sm my-0" data-dismiss="modal">No, Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <p className="red-text"> <strong>¿Estas seguro?</strong></p>
+                      <img src={newImg} width="200px" alt="#"/>
+                      <h5><small>{titulo}</small></h5>
+                      <br/>
+                    </div>
+                    <button type="button" className="btn btn-danger btn-rounded waves-effect btn-lg btn-block white-text" value={id} onClick={handleDelete}>Eliminar</button>
+                      <button type="button" className="btn btn-outline-danger btn-rounded waves-effect btn-lg btn-block white-text" data-dismiss="modal">No, Cancelar</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
         </span>
       </td>
     </tr>
