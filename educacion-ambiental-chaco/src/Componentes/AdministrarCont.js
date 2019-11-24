@@ -22,6 +22,7 @@ function AdministrarCont(){
       consultarApi();
     },[imagenes])
 
+
     return(
             <div>
                 <NavBarPage/>
