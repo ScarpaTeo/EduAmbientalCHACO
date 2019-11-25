@@ -7,7 +7,49 @@ const TablaContenido = ({information}) => {
     const {id,titulo,subtitulo,detalle,categoria,tags,name_foto}=information
     let newImg="https://localhost:44398/images/"+name_foto
 
+    
+      const [ownerState, setOwnerState] = useState({
+        titulo: titulo,
+        subtitulo:subtitulo,
+        detalle: detalle,
+        categoria: categoria,
+        tags: tags
+      });
+    
+    
+      const handleOwnerChange = (e) => setOwnerState({
+      ...ownerState,
+      [e.target.name]: [e.target.value],
+    });
    
+    const handleEdit = async e =>{
+      e.preventDefault();
+
+      const identi= e.target.value
+      
+
+      const body = {
+        token: localStorage.getItem('token'),
+        id: identi,
+        titulo: ownerState.titulo.toString(),
+        subtitulo: ownerState.subtitulo.toString(),
+        detalle: ownerState.detalle.toString(),
+        categoria: ownerState.categoria.toString(),
+        tags: ownerState.tags.toString()
+      }
+      console.log(body)
+    
+      axios({
+        method: 'post',
+        url: 'https://localhost:44398/api/Contenido/Edit',
+        data:body
+      }).then(res => {
+        console.log(res.data);
+        
+      })
+      
+    }
+
     const handleDelete = async e =>{
       e.preventDefault();
       const identi= e.target.value
@@ -56,19 +98,19 @@ const TablaContenido = ({information}) => {
                   <div class="modal-body">
                     <div class="text-center">
                       
-                      <form >
+                      <form>
                           <p>
-                              <input className="form-control z-depth-1" type="text" placeholder='Titulo' maxlength="30" name='titulo' id='Titulo' value={titulo} />
+                              <input className="form-control z-depth-1" type="text" placeholder='Titulo' maxlength="30" name='titulo' id='Titulo' value={ownerState.titulo} onChange={handleOwnerChange} />
                           </p>
                           <p>
-                              <input  className="form-control z-depth-1" type="text" placeholder='Subtitulo' maxlength="120" name='subtitulo' id='Subtitulo' value={subtitulo}  />
+                              <input  className="form-control z-depth-1" type="text" placeholder='Subtitulo' maxlength="120" name='subtitulo' id='Subtitulo' value={ownerState.subtitulo} onChange={handleOwnerChange} />
                           </p>
                           <div class="form-group shadow-textarea">
-                              <textarea className="form-control z-depth-1" name="detalle" id="Detalle" rows="3" placeholder="Escribe una Descripcion..." value={detalle}  />
+                              <textarea className="form-control z-depth-1" name="detalle" id="Detalle" rows="3" placeholder="Escribe una Descripcion..." value={ownerState.detalle} onChange={handleOwnerChange}/>
                           </div>
                           <p>
                               <label for="categoria" className="grey-text">Sector</label>
-                              <select className="form-control z-depth-1" name="categoria" id="Categoria" value={categoria} >
+                              <select className="form-control z-depth-1" name="categoria" id="Categoria" value={ownerState.categoria} onChange={handleOwnerChange}>
                               <option value="">Todos</option>
                               <option value="1">Zona Ramsar</option>
                               <option value="2">Zona Agropecuaria Centro/Sur</option>
@@ -78,7 +120,7 @@ const TablaContenido = ({information}) => {
                           </p>
                           <p>
                               <label for="Tags" className="grey-text">Categoria</label>
-                              <select className="form-control z-depth-1" name="tags" id="Tags" value={tags} >
+                              <select className="form-control z-depth-1" name="tags" id="Tags" value={ownerState.tags} onChange={handleOwnerChange} >
                               <option value="">Todos</option>
                               <option value="noticia">Noticias</option>
                               <option value="campaña">Campañas</option>
@@ -87,7 +129,7 @@ const TablaContenido = ({information}) => {
                               <option value="evento">eventos</option>
                               </select>
                           </p>
-                          <button className="btn btn-success btn-rounded waves-effect btn-lg btn-block white-text" type="submit">Guardar</button>
+                          <button className="btn btn-success btn-rounded waves-effect btn-lg btn-block white-text" type="button" onClick={handleEdit} value={id} >Guardar</button>
                           <button type="button" className="btn btn-outline-success btn-rounded waves-effect btn-lg btn-block " data-dismiss="modal">No, Cancelar</button>
 
                         </form>
