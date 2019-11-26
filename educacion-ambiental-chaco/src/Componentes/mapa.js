@@ -10,15 +10,15 @@ const Interactivo = () =>{
 
     return(
         <div className="row mx-auto">
-            <NavBarPage/>
-            <div className="col-md-6 py-3 py-md-5">
-                <h2 className="h1-responsive white-text font-weight-bold text-center mt-1">
-                Educacion Ambiental Chaco 
+            <div className="col-md-6 py-3 py-md-5 ">
+                <div className=" p-5 m-5"  style={{maxWidth:"80%",margin:"auto"}}>
+                <h2 className="h3-responsive white-text text-center mt-1">
+                Educacion Ambiental <h1 className="h1-responsive white-text mt-1">Chaco</h1> 
                 </h2>
-                <p className="white-text text-center mt-4">
-                DESDE EL AÑO 2017 EL MINISTERIO DE PLANIFICACIÓN AMBIENTE E INNOVACIÓN 
-TECNOLÓGICA LIDERA EL DISEÑO DEL NUEVO PROGRAMA DE EDUCACION AMBIENTAL
-DE LA PROVINCIA DEL CHACO.
+                </div>
+                <p className="white-text text-center m-5 mt-5">
+                 Desde el año 2017 el ministerio de planificación, ambiente e innovación tecnológica lidera el diseño del nuevo programa 
+                 de educacion ambiental de la provincia del chaco.
                 </p>
             </div>
            <div className="col-md-6">
@@ -46,7 +46,7 @@ DE LA PROVINCIA DEL CHACO.
                 </div>
                 <br/>
                 <br/>
-                <h2 className="white-text text-center animated bounceInDown slower">Filtre por Regiones</h2>
+                <h2 className=" white-text text-center animated bounceInDown slower" onClick={event => guardarCategoria(event="0")}><stronge>Chaco</stronge></h2>
            </div>
            <GetGaleria 
            filtro={Categoria}

@@ -45,6 +45,10 @@ function GetGaleria({filtro}){
         mostrar=imagenes
         console.log(imagenes)
     }
+    if(result==='0'){
+        mostrar=imagenes
+        console.log(imagenes)
+    }
 
     return(
 
