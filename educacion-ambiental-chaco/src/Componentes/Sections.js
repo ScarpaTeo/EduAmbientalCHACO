@@ -6,17 +6,60 @@ import { MDBIcon} from "mdbreact";
 class Sections extends React.Component {
 
   state = {
+    master:null
       
   };
 
-  componentDidMount(){
-    
+  async componentWillMount() {
+    let tokenveri=localStorage.getItem('token')
+    const response = await fetch(`https://localhost:44398/api/Access/IsMaster?token=${tokenveri}`);
+    const json = await response.json();
+    this.setState({ master: json.data });
+    console.log(this.state.master)
   }
 
   render() {
       //asi se hace un renderizado condicional
+    var Masopciones;
     let content=localStorage.getItem('token')
     var loggin;
+
+    if(this.state.master===true){
+      Masopciones=<React.Fragment>
+        <div className="row justify-content-center  pepito pt-3  fixed-bottom"></div>
+
+            <div className="col-7 col-sm-3 col-md-2 my-2 mx-2 mx-md-4 cajitas px-0 py-3 animated bounceInRight slower" style={{"background-color": "rgb(60, 228, 116)"}}>
+              <div className="row cajita align-items-center">
+                <div className="col-12">
+                  <p className="h5"><strong>Nuevo Referente</strong></p>
+                </div>
+                <div className="col-12 text-right fixed-bottom mb-3">
+                    <Link to={{
+                      pathname:'/NuevoReferente'
+                      }}>
+                      <MDBIcon className="white-text mr-2" size="3x" icon="chevron-circle-right" />
+                    </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-7 col-sm-3 col-md-2 my-2 mx-2 mx-md-4 cajitas px-0 py-3 animated bounceInRight slower" style={{"background-color": "rgb(60, 228, 116)"}}>
+              <div className="row cajita align-items-center">
+                <div className="col-12">
+                  <p className="h5"><strong>Administrar Referentes</strong></p>
+                </div>
+                <div className="col-12 text-right fixed-bottom mb-3">
+                    <Link to={{
+                      pathname:'/NuevoReferente'
+                      }}>
+                      <MDBIcon className="white-text mr-2" size="3x" icon="chevron-circle-right" />
+                    </Link>
+                </div>
+              </div>
+            </div>
+          
+      </React.Fragment>
+    }
     if(content!==null){
       return <React.Fragment>
         <div className="row justify-content-center  pepito pt-3  fixed-bottom">
@@ -51,25 +94,7 @@ class Sections extends React.Component {
                 </div>
               </div>
             </div>
-
-
-              <div className="col-7 col-sm-3 col-md-2 my-2 mx-2 mx-md-4 cajitas px-0 py-3 animated bounceInRight slower" style={{"background-color": "rgb(60, 228, 116)"}}>
-              <div className="row cajita align-items-center">
-                <div className="col-12">
-                  <p className="h5"><strong>Nuevo Referente</strong></p>
-                </div>
-                <div className="col-12 text-right fixed-bottom mb-3">
-                    <Link to={{
-                      pathname:'/NuevoReferente'
-                      }}>
-                      <MDBIcon className="white-text mr-2" size="3x" icon="chevron-circle-right" />
-                    </Link>
-                </div>
-              </div>
-            </div>
-               
-
-
+        {Masopciones}
         </div>
       </React.Fragment>
     }else return (
