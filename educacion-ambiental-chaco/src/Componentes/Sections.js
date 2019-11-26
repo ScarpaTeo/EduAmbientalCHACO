@@ -64,7 +64,7 @@ class Sections extends React.Component {
       return <React.Fragment>
         <div className="row justify-content-center  pepito pt-3  fixed-bottom">
 
-               <div className="col-7 col-sm-3 col-md-2 my-2 mx-2 mx-md-4 cajitas px-0 py-3 animated bounceInLeft delay-1" style={{"background-color": "rgb(60, 228, 116)"}}>
+               <div className="col-7 col-sm-3 col-md-2 my-2 mx-2 mx-md-4 cajitas px-0 py-3 animated bounceInLeft slower delay-1" style={{"background-color": "rgb(60, 228, 116)"}}>
                 <div className="row cajita align-items-center">
                   <div className="col-12">
                     <p className="h5"><strong>Admin contenido</strong></p>
