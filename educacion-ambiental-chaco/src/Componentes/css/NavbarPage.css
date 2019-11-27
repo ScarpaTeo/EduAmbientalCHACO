@@ -14,6 +14,22 @@
     
 }
 
+
+.loguito2{
+    width: 60px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #3387C8;
+    border: 0px;
+    box-shadow: 0px 0px 0px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 80%;
+    box-shadow: 0px 2px 6px #2a2a2a;
+    
+}
+
 @media (min-width: 720px){
     .loguito{
         

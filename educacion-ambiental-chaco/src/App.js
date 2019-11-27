@@ -7,6 +7,7 @@ import './Componentes/css/App.css';
 import Sumate from './Componentes/Sumate';
 import NavbarPage from './Componentes/NavbarPage'
 import IniciarSesion from './Componentes/IniciarSesion'
+import Footer from './Componentes/Footer'
 
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
 import PrivateRoutes from './Componentes/PrivateRoutes'
@@ -73,6 +74,7 @@ class App extends Component {
                 
                 
             </Switch>
+            <Footer/>
         </BrowserRouter>
       
       </div>

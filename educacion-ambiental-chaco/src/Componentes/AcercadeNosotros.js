@@ -78,7 +78,6 @@ COMPROMETIDOS EN EL CUIDADO DEL AMBIENTE.</p>
   </div>
 </div>
 
-<Footer/>
 
 
 </React.Fragment>

@@ -51,7 +51,6 @@ const Interactivo = () =>{
            <GetGaleria 
            filtro={Categoria}
            />
-           <Footer/>
         </div>
     )
 }

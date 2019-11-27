@@ -18,7 +18,7 @@ class Login extends React.Component {
 
     return (
       <MDBContainer>
-        <div class="card p-1 tarjetita" style={{borderRadius:"35px"}}>
+        <div class="card p-1 animated bounceInLeft slower" style={{borderRadius:"25px",maxWidth:"350px"}}>
           
           <br/>
 
@@ -36,17 +36,16 @@ class Login extends React.Component {
                 <input type="password" placeholder="contraseña" value={form.password} onChange={onChange} name="password" class="form-control" required/>
               </div>
               <br/>
-              <div class="d-flex justify-content-around">
+              <div class="d-flex">
                   <div>
                       <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember"/>
                           <label class="custom-control-label" for="defaultLoginFormRemember" style={{fontSize:"13px"}}>Recordarme</label>
                       </div>
                   </div>
-                  <div>
-                      <a style={{fontSize:"13px"}} href="">Olvidaste tu contraseña?</a>
-                  </div>
               </div>
+              <br/>
+              <br/>
 
               <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Entrar</button>
 

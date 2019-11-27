@@ -22,7 +22,6 @@ const RedReferentes = () => {
 
   return (
     <div>
-      <NavBarPage/>
       <div className="container" style={{minHeight: "100vh"}}>
           <div className="p-1 mb-3">
             <h2 className="h1-responsive white-text font-weight-bold text-center my-5 ">
@@ -52,7 +51,6 @@ const RedReferentes = () => {
 
 
       </div>
-        <Footer/>
     </div>
     );
 
