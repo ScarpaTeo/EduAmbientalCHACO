@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import {Redirect,BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function PrivateRoute({ component: Component, ...rest }) {

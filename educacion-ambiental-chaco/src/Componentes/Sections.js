@@ -6,16 +6,23 @@ import { MDBIcon} from "mdbreact";
 class Sections extends React.Component {
 
   state = {
-    master:null
+    master:null,
+    admin:null
       
   };
 
   async componentWillMount() {
     let tokenveri=localStorage.getItem('token')
+
     const response = await fetch(`https://localhost:44398/api/Access/IsMaster?token=${tokenveri}`);
     const json = await response.json();
-    this.setState({ master: json.data });
+
+    const response2 = await fetch(`https://localhost:44398/api/Access/IsAdmin?token=${tokenveri}`);
+    const json2 = await response2.json();
+
+    this.setState({ master: json.data, admin: json2.data });
     console.log(this.state.master)
+    console.log(this.state.admin)
   }
 
   render() {
@@ -60,7 +67,7 @@ class Sections extends React.Component {
           
       </React.Fragment>
     }
-    if(content!==null){
+    if(this.state.admin===true||this.state.master===true){
       return <React.Fragment>
         <div className="row justify-content-center  pepito pt-3  fixed-bottom">
 
