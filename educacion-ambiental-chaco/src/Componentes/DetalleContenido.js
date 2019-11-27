@@ -44,33 +44,18 @@ const Detalle = () =>{
 
 
     return(
-            <MDBContainer fluid className="">
-            <section className="text-center my-5 primary-color #4285F4" style={{borderRadius:"25px"}}>
-            <h3 className="text-white pb-2"></h3>
-            <MDBRow>
-                <div className="col-md-12" >
+        <React.Fragment>
+            <div className="row pt-5" style={{maxWidth:"90%", margin:"auto"}}>
+                <div className="col-md-12" style={{padding:"5px"}}>
                     {data.map(items=>(
                         <Detallecont
                         contenido={items}
+                        imagenes={dataGallery}
                         />             
                     ))}
                 </div>
-                <div className="row">
-                    {dataGallery.map(items=>(
-                        <div className="col-md-3">
-
-                            <DetalleGaleri
-                            galeria={items}
-                            /> 
-
-                        </div>
-                    ))}
-                </div>
-            </MDBRow>
-            </section>
-            <Footer/>
-
-        </MDBContainer>
+            </div>
+        </React.Fragment>
     )
 }
 export default Detalle

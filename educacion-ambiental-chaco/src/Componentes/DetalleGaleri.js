@@ -12,15 +12,18 @@ const DetalleGaleri = ({galeria}) => {
     let idtarget =name
 
     let mostrar
+    let mostrarpdf
     if (name.includes('.pdf')){
-        mostrar=<div className="row">
-                    <div className=".col-md-4">
-                        <div className="card mx-auto">
-                            <div className="card-body">
-                                <p className="text-center">{name}</p>
-                                <img src={imgpdf} style={{borderRadius:"5px",padding:"20px"}} width="300px" alt="Card image cap"/>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target={target}> ver
-                                </button>
+        mostrarpdf=<div className="row">
+                    <div className="">
+                        <div className="mx-auto" style={{borderRadius:"5px", maxWidth:"200px",maxHeight:"250px"}}>
+                            <div className=""  style={{margin:"auto"}}>
+
+                                <a data-toggle="modal" data-target={target}>
+                                    <img src={imgpdf} style={{borderRadius:"5px", maxWidth:"100%"}} alt="Card image cap"/> 
+                                </a>
+                                
+                                <p className="text-center white-text pt-2"><small>{name}</small></p>
 
                             <div class="modal fade" id={idtarget} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
@@ -33,7 +36,7 @@ const DetalleGaleri = ({galeria}) => {
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                <object data={newImg2} type='pdf/html' width="100%" height="500" style={{height: '85vh'}}/>
+                                <embed src={newImg2} width="100%" height="500" type="application/pdf"/>
                                 </div>
                                 </div>
                             </div>
@@ -42,14 +45,16 @@ const DetalleGaleri = ({galeria}) => {
                         </div>            
                     </div>
                 </div>
-    }else{
+    }
+    
+    if(name.includes('.pdf')===false){
         mostrar=<div className="row">
-                    <div className="col-md-4">
-                    <div className="card mx-auto" style={{width:'20rem', margin:'30px'}}>
-                        <div className="card-body">
-                        <img src={newImg2} style={{borderRadius:"5px",padding:"20px"}} width="300px" alt="Card image cap"/>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target={target}> ver
-                        </button>
+                    
+                    <div className="mx-auto" style={{ borderRadius:"5px", maxWidth:"200px",maxHeight:"250px"}}>
+                        <div className="" style={{margin:"auto"}}>
+                        <a data-toggle="modal" data-target={target}>
+                            <img src={newImg2} style={{borderRadius:"5px",maxWidth:"100%"}} alt="Card image cap"/>
+                        </a>
 
                             <div class="modal fade" id={idtarget} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
@@ -69,7 +74,7 @@ const DetalleGaleri = ({galeria}) => {
                             </div>
 
                         </div>
-                    </div>
+                    
                     </div>
                 </div>
     }
@@ -79,6 +84,8 @@ const DetalleGaleri = ({galeria}) => {
   return (
         <React.Fragment>
             {mostrar}
+
+            {mostrarpdf}
 
         </React.Fragment>
     )
