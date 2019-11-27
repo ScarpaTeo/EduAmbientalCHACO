@@ -48,8 +48,6 @@ class App extends Component {
                 <Route exact path="/Sumate" component={FormularioContact}/>
                 <Route exact path="/Iniciar" component={IniciarSesion}/>
                 <Route  exact path="/Contenido/:id" component={Detalle}/>
-                <Route exact path="/Administrar" component={AdministrarCont}/>
-                <Route exact path="/Add/:handle" component={CargarGalleria}/>
                 <Route exact path="/AcercaDe" component={AcercaDe}/>
 
                 
@@ -60,7 +58,12 @@ class App extends Component {
                 />
                 
                 <PrivateRoutes
-                  path="/NuevoContenido/Galeria/:handle"
+                  path="/Administrar"
+                  component={AdministrarCont}
+                />
+                
+                <PrivateRoutes
+                  path="/Add/:handle"
                   component={CargarGalleria}
                 />
 

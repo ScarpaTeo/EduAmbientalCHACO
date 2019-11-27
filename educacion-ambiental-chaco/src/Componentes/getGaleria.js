@@ -56,7 +56,7 @@ function GetGaleria({filtro}){
             <div className="text-center">
 
                 <Galeria
-                    imagenes={mostrar}
+                    imagenes={mostrar.reverse()}
                     categoria={filtro}
                 />
                 {(paginaActual===1) ? null :(

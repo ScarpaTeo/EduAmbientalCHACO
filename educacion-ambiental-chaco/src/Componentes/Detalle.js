@@ -13,7 +13,7 @@ const Detallecont = ({contenido,galeria,imagenes}) => {
         <React.Fragment>
             
 
-            <div class="jumbotron text-center hoverable p-4 #2979ff blue accent-3" style={{borderRadius:"25px"}}>
+            <div class="jumbotron text-center hoverable p-4 bg-white" style={{borderRadius:"25px"}}>
 
                 <div class="row">
 
@@ -31,11 +31,11 @@ const Detallecont = ({contenido,galeria,imagenes}) => {
                     <div class="col-md-7 text-md-left ml-3 mt-3">
 
 
-                    <h2 class="h2 mb-4 display-4 font-roboto white-text">{titulo}</h2>
-                    <h5 class="h3 mb-4 font-roboto white-text">{subtitulo}</h5>
+                    <h2 class="h2 mb-4 display-4 font-roboto blue-text">{titulo}</h2>
+                    <h5 class="h3 mb-4 font-roboto blue-text">{subtitulo}</h5>
 
-                    <p class="font-weight-normal font-roboto white-text" style={{fontSize:"14px"}}>{detalle}</p>
-                    <p class="font-weight-normal font-roboto white-text">Categoria<a><strong> {tags} </strong></a></p>
+                    <p class="font-weight-normal font-roboto blue-text" style={{fontSize:"14px"}}>{detalle}</p>
+                    <p class="font-weight-normal font-roboto blue-text">Categoria<a><strong> {tags} </strong></a></p>
 
                     
 
@@ -45,16 +45,17 @@ const Detallecont = ({contenido,galeria,imagenes}) => {
                     <br/>
                     <br/>
                     <br/>
-                    <hr/>
-                    <br width="80%"/>
+                    <hr width="80%" style={{color:"blue", borderStyle:"solid"}}/>
+                    <br/>
                     <br/>
                     <br/>
                     <br/>
                         <div className="row">
                         {imagenes.map(items=>(
-                            <div className="col-md-2">
+                            <div className="col-md-2" style={{margin:"2px"}}>
 
                                 <Detallegaleria
+                                className="hovereffect"
                                 galeria={items}
                                 /> 
 

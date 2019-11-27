@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import imgpdf from '../Componentes/Img/pdf.png'
+import '../Componentes/css/Galleria.css'
 
 
 
@@ -20,7 +21,9 @@ const DetalleGaleri = ({galeria}) => {
                             <div className=""  style={{margin:"auto"}}>
 
                                 <a data-toggle="modal" data-target={target}>
-                                    <img src={imgpdf} style={{borderRadius:"5px", maxWidth:"100%"}} alt="Card image cap"/> 
+                                    <div className="galeria">
+                                    <img src={imgpdf} className="fotica" style={{borderRadius:"5px", maxWidth:"100%"}} alt="Card image cap"/> 
+                                    </div>
                                 </a>
                                 
                                 <p className="text-center white-text pt-2"><small>{name}</small></p>
@@ -61,7 +64,6 @@ const DetalleGaleri = ({galeria}) => {
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">{name}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
@@ -83,10 +85,11 @@ const DetalleGaleri = ({galeria}) => {
 
   return (
         <React.Fragment>
+            <div className="galeria">
             {mostrar}
+            </div>
 
             {mostrarpdf}
-
         </React.Fragment>
     )
 }

@@ -26,7 +26,9 @@ class FormularioImgGallery extends React.Component{
     
         return(
             <React.Fragment>
-            <div className="card mx-auto" style={{borderRadius:"35px"}}>
+                <div className="row">
+                    <div className="col-md-12 mx-auto">
+            <div className="card px-5" style={{borderRadius:"35px",minWidth:"400px"}}>
             <h5 className="card-header info-color white-text text-center py-4">
                 <strong>foto de {titulo}</strong>
             </h5>
@@ -56,6 +58,8 @@ class FormularioImgGallery extends React.Component{
                 </form>
                 {this.state.boton ? <Redirect to="/Provincias" /> : null}
 
+            </div>
+            </div>
             </div>
         </div>
         
