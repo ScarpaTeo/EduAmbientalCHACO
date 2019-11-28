@@ -24,15 +24,14 @@ function AdministrarCont(){
 
 
     return(
-            <div>
-                <div className="container">
-                    <div className="info-color #33b5e5 p-1 mb-3">
-                        <h2 className="h1-responsive white-text font-weight-bold text-center my-5 ">
-                        Administrador de Contenido
-                        </h2>
-                    </div>
-                    <div className="card mx-auto">
-                        <div className="card-body">
+            <React.Fragment>
+                <div className="row justify-content-center align-items-center pt-5">
+                    <div className="col-10 col-md-8">
+                    <div className="card white" style={{ borderRadius:"35px"}}>
+                        <h5 className="card-header info-color text-white text-center py-4" style={{ borderRadius:"35px"}} >
+                            <strong>Administrar Contenido</strong>
+                        </h5>
+                        <div className="card-body px-lg-5">
 
                         <table class="table table-bordered table-responsive-md table-striped text-center">
                             <thead class="">
@@ -46,7 +45,7 @@ function AdministrarCont(){
                                 </tr>
                                 
                             </thead>
-                            <tbody>
+                            <tbody style={{visibility:"visible"}}>
                                 {imagenes.map(item => (
                                         <TablaContenido
                                         information = {item}
@@ -61,7 +60,8 @@ function AdministrarCont(){
 
 
                 </div>
-                </div> 
+                </div>
+            </React.Fragment>
 
     )
 }
