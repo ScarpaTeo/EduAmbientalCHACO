@@ -26,26 +26,22 @@ render() {
     if(content!==null){
       loggin =
       <React.Fragment>
-      
-       <div className="loguito fixed-top">
-        <MDBNavLink onClick={this.handlerClick} className="px-3 mb-2" to="#"><MDBIcon className="animated bounceInRight slower" icon="sign-out-alt" size="2x" style={{color: "white"}}/></MDBNavLink>
+
+      <div class="loguito dropdown fixed-top">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+        <MDBIcon className="animated bounceInRight slower pt-3 px-2" icon="sign-out-alt" size="2x" style={{color: "white"}}/>
+        </button>
+        <div class="dropdown-menu">
+          <MDBNavLink  className="dropdown-item" to="/">Añadir</MDBNavLink>
+          <MDBNavLink  className="dropdown-item" to="/QueHacemos">Eventos</MDBNavLink>
+          <MDBNavLink  className="dropdown-item" to="/Provincias">Regiones</MDBNavLink>
+          <MDBNavLink  className="dropdown-item" to="/RedReferentes">Red Referentes</MDBNavLink>
+          <MDBNavLink  className="dropdown-item" to="/Sumate">Sumate</MDBNavLink>
+          <hr/>
+          <MDBNavLink onClick={this.handlerClick} className="dropdown-item" to="/Sumate">Cerrar Sesion</MDBNavLink>
+        </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <div className="" style={{marginTop:"15px",marginLeft:"90%"}}>
-        <MDBDropdown dropleft>
-          <MDBDropdownToggle color="blue" className="px-3 mb-2">
-          <MDBIcon className="animated bounceInRight slower " icon="caret-down" size="2x" style={{color: "white"}}/>
-          </MDBDropdownToggle>
-          <MDBDropdownMenu basic>
-            <MDBDropdownItem><MDBNavLink  className="" to="/QueHacemos">Eventos</MDBNavLink></MDBDropdownItem>
-            <MDBDropdownItem><MDBNavLink  className="" to="/Provincias">Recorre</MDBNavLink></MDBDropdownItem>
-            <MDBDropdownItem><MDBNavLink  className="" to="/RedReferentes">Red Referentes</MDBNavLink></MDBDropdownItem>
-            <MDBDropdownItem><MDBNavLink  className="" to="/Sumate">Sumate</MDBNavLink></MDBDropdownItem>
-        </MDBDropdownMenu>
-      </MDBDropdown>
-    </div>
+
       </React.Fragment>
     }
     
