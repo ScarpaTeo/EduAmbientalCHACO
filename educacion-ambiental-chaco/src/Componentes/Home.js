@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Componentes/Header';
 import Sections from '../Componentes/Sections';
-import Footer from '../Componentes/Footer';
+import './css/fondo.css';
 
 
 
@@ -19,12 +19,11 @@ class Home extends React.Component {
   render() {
     
     return (
-      <div className="home" style={{height: "100vh"}}>
+      <div className="fondo" style={{height: "100vh"}}>
         
         <Header/>
         <Sections/>
         
-        <Footer/>
       </div>
     );
   }

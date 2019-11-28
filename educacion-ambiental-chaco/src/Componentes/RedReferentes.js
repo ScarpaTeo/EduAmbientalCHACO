@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Referente from './Referente'
 import NavBarPage from './NavbarPage'
-import Footer from './Footer'
+import './css/fondo.css';
 
 const RedReferentes = () => {
 
@@ -21,7 +21,7 @@ const RedReferentes = () => {
     }, [dato])
 
   return (
-    <div>
+    <div className="fondo">
       <NavBarPage/>
       <div className="container" style={{minHeight: "100vh"}}>
           <div className="p-1 mb-3">
@@ -52,7 +52,6 @@ const RedReferentes = () => {
 
 
       </div>
-        <Footer/>
     </div>
     );
 

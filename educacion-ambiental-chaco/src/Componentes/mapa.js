@@ -1,15 +1,14 @@
 import React, { useState,useEffect } from 'react'
-import {MDBIcon } from 'mdbreact';
+import './css/fondo.css';
 import './css/style.css'
 import GetGaleria from '../Componentes/getGaleria'
 import NavBarPage from './NavbarPage'
-import Footer from './Footer'
 
 const Interactivo = () =>{
     const [Categoria,guardarCategoria]=useState("");
 
     return(
-        <div className="container-fluid row justify-content-center align-items-center mx-auto pt-5">
+        <div className="container-fluid fondo row justify-content-center align-items-center mx-auto pt-5">
             <NavBarPage/>
             <div className="col-12 col-md-6 mb-5 mb-md-0 px-md-5">
                 <h2 className="h1-responsive white-text font-weight-bold text-center mt-1">
@@ -46,7 +45,6 @@ const Interactivo = () =>{
             <GetGaleria 
                 filtro={Categoria}
             />
-            <Footer/>
         </div>
     )
 }

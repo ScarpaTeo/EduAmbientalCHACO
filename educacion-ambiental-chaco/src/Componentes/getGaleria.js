@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { MDBContainer} from "mdbreact";
 import Galeria from './Galeria'
-import './css/getGaleria.css'
 
 
 
