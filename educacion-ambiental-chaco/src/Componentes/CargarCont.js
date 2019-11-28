@@ -98,7 +98,7 @@ handleImageChange = (e) => {
 
       if(this.state.resultado!=0){
         next =
-        <div className="row mx-auto">
+        <div className="row mx-auto animated bounceInRight">
         <div className="col-md-12">
           <a onClick={this.funcionNext} class="btn btn-primary btn-lg" style={{fontSize:"40px",borderRadius:"10px"}}><i className="fas fa-chevron-circle-right white-text"></i></a>
         </div>
@@ -107,7 +107,7 @@ handleImageChange = (e) => {
       
       if(this.state.resultadoImg!=0){
         nextImg =
-        <div className="row mx-auto">
+        <div className="row mx-auto animated bounceInRight">
         <div className="col-md-12">
           <a onClick={this.funcionNext} class="btn btn-primary btn-lg" style={{fontSize:"40px",borderRadius:"10px"}}><i className="fas fa-chevron-circle-right white-text"></i></a>
         </div>
@@ -118,16 +118,19 @@ handleImageChange = (e) => {
         case 0:
           mostrar=
           <React.Fragment>
-            <div className="row">
-              <div className="card mx-auto" style={{width:'50rem', margin:'30px', borderRadius:"35px"}} >
+            <div className="row justify-content-center align-items-center px-2">
+              <div className="col-10 col-md-8"  >
               <Formulario
                     form={this.state.form}
                     onChange={this.handleChange}
                     onSubmit={this.handleSubmit}
                     />
               </div>
+              <div className="col-12 col-md-2 text-center">
+                {next}            
+              </div>
             </div>
-            {next}            
+           
 
           </React.Fragment>
           
@@ -135,8 +138,8 @@ handleImageChange = (e) => {
         case 1:
           mostrar=
           <React.Fragment>
-            <div className="row">
-              <div className="card mx-auto" style={{width:'50rem', margin:'30px', borderRadius:"35px"}} >
+            <div className="row justify-content-center align-items-center px-2">
+              <div className="col-10 col-md-8" >
               <FormImg
                   onChange={this.handleImageChange}
                   onSubmit={this.handleSubmitImg}
@@ -144,8 +147,10 @@ handleImageChange = (e) => {
                   file={this.state.file}
                   />
               </div>
+              <div className="col-12 col-md-2 text-center">
+                  {nextImg}            
+              </div>
             </div>
-            {nextImg}            
 
           </React.Fragment>
           

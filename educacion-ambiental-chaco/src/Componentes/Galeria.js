@@ -26,7 +26,7 @@ function Galeria({imagenes,categoria}){
           break;
     
       default:
-        men="Novedades CHACO"
+        men="Recorre la Provincia"
         break;
     }
     
@@ -34,7 +34,7 @@ function Galeria({imagenes,categoria}){
         <div fluid className="fondito px-3 pt-5 mt-5" style={{borderRadius: "25px"}}>
             <section className="text-center mb-5">
                 <div className="col-md-12 info-color #33b5e5 p-1 mb-3" style={{borderRadius: "25px"}}>
-                    <h3 className="h2-responsive white-text font-weight-bold text-center my-5 ">{men}</h3>
+                    <h5 className="h3-responsive white-text text-center mt-1">{men}</h5>
                 </div>
 
                 <div className="row">

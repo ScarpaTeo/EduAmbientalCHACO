@@ -27,7 +27,7 @@ render() {
       loggin =
       <React.Fragment>
       
-       <div className="loguito ">
+       <div className="loguito fixed-top">
         <MDBNavLink onClick={this.handlerClick} className="px-3 mb-2" to="#"><MDBIcon className="animated bounceInRight slower" icon="sign-out-alt" size="2x" style={{color: "white"}}/></MDBNavLink>
       </div>
       <br/>

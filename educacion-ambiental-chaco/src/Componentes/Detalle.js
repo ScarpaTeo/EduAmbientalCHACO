@@ -55,7 +55,6 @@ const Detallecont = ({contenido,galeria,imagenes}) => {
                             <div className="col-md-2" style={{margin:"2px"}}>
 
                                 <Detallegaleria
-                                className="hovereffect"
                                 galeria={items}
                                 /> 
 

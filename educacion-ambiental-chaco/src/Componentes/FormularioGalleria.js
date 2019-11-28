@@ -26,13 +26,11 @@ class FormularioImgGallery extends React.Component{
     
         return(
             <React.Fragment>
-                <div className="row">
-                    <div className="col-md-12 mx-auto">
-            <div className="card px-5" style={{borderRadius:"35px",minWidth:"400px"}}>
-            <h5 className="card-header info-color white-text text-center py-4">
+            <div className="card white" style={{ borderRadius:"35px"}}>
+            <h5 className="card-header info-color text-white text-center py-4" style={{ borderRadius:"35px"}}>
                 <strong>foto de {titulo}</strong>
             </h5>
-            <div className="card-body px-lg-5">
+            <div className="card-body px-lg-5 text-center">
                 <form onSubmit={onSubmit}>
                     
                     <label class="btn btn-primary btn-lg" style={{fontSize:"40px",borderRadius:"10px"}}>
@@ -42,9 +40,9 @@ class FormularioImgGallery extends React.Component{
                           
                 <div className="row">
                  {file.map(foto=>(
-                        <div class="col-sm-6 col-md-4">
-                            <div className="card" style={{minWidth:"200px"}}>
-                                <div className="card-body">
+                        <div class="col-sm-4 col-md-2">
+                            <div className="" style={{maxWidth:"300px"}}>
+                                <div className="">
                                     
                                     <img src={foto} width="100%" className=" thumbnail img-responsive p-1 img-fluid" alt=""/>
                                     
@@ -60,9 +58,6 @@ class FormularioImgGallery extends React.Component{
 
             </div>
             </div>
-            </div>
-        </div>
-        
         </React.Fragment>        
         )
     }

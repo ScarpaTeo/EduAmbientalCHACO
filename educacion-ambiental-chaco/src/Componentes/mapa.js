@@ -15,11 +15,9 @@ const Interactivo = () =>{
                 <h2 className="h3-responsive white-text text-center mt-1">
                 Educacion Ambiental <h1 className="h1-responsive white-text mt-1">Chaco</h1> 
                 </h2>
+                <button type="button" onClick={event => guardarCategoria(event="0")} className="btn btn-outline-white btn-rounded waves-effect btn-lg btn-block animated bounceInDown slower ">Recorre la Provincia</button>                   
                 </div>
-                <p className="white-text text-center m-5 mt-5">
-                 Desde el año 2017 el ministerio de planificación, ambiente e innovación tecnológica lidera el diseño del nuevo programa 
-                 de educacion ambiental de la provincia del chaco.
-                </p>
+                
             </div>
            <div className="col-md-6">
                <br/>
@@ -44,9 +42,6 @@ const Interactivo = () =>{
                         </g>
                     </svg>
                 </div>
-                <br/>
-                <br/>
-                <h2 className=" white-text text-center animated bounceInDown slower" onClick={event => guardarCategoria(event="0")}><stronge>Chaco</stronge></h2>
            </div>
            <GetGaleria 
            filtro={Categoria}

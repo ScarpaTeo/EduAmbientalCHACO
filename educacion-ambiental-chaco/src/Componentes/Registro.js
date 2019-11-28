@@ -20,8 +20,8 @@ class Registro extends React.Component{
         
 
         return(
-                 <div className="card" style={{borderRadius:"35px"}}>
-                    <h5 className="card-header info-color text-white text-center py-4">
+                 <div className="card white" style={{ borderRadius:"35px"}}>
+                    <h5 className="card-header info-color text-white text-center py-4" style={{ borderRadius:"35px"}}>
                         <strong>Nuevo Referente</strong>
                     </h5>
                     <div className="card-body px-lg-5">

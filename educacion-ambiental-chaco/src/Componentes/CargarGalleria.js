@@ -47,9 +47,9 @@ class CargarGalleria extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <div className="col-md-12 pt-3" style={{maxWidth:"500px"}}>
-
+        <div className="row justify-content-center align-items-center px-2">
+          <div className="col-10 col-md-8">
+            
              <FormImg
                         onChange={this.handleImageChange}
                         onSubmit={this.handleSubmit}
